@@ -1,0 +1,13 @@
+.Purchas{
+    max-width: 100%;
+}  
+.details-con{
+    width: calc(100% - 105px);
+}
+.purshas-footer{
+    width: 98%;
+}
+.img-con{
+    height: 100px;
+    width: 100px;
+}

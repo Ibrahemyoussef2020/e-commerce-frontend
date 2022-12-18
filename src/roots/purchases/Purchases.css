@@ -1,0 +1,17 @@
+.itemes{
+    flex: 1;
+    margin-right: 10px;
+}
+
+.bill{
+    width: 200px;
+    max-width: 400px;
+    height: 100px;
+}
+
+@media only screen and (max-width:650px) {
+    .Purchases.flex-row-reverse {
+        flex-direction: row !important;
+        max-width: 100%;
+    }
+}

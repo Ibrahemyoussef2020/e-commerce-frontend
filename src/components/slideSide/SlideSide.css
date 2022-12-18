@@ -1,0 +1,46 @@
+.SlideSide{
+    min-height: 450px;
+}
+
+@media only screen and (max-width: 640px){
+
+    /*            SlideSide         */
+
+    .SlideSide{
+        display: block;
+        height: auto !important;
+    }
+
+    .StaticSide{
+        height: auto !important;
+        width: 100% !important;
+    }
+    .StaticSide ul{
+        flex-direction: row !important;
+        padding: 0 !important;
+
+        flex-wrap: wrap;
+    }
+    .StaticSide  li{
+        padding: 0 7px !important;
+        height: 100%;
+        max-width: 110px;
+        margin: 5px 5px;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+
+    .StaticSide img{
+        margin-left: 0 !important;
+        margin-right: 5px !important;
+    }
+
+    /*  MainSliders  */
+
+    .MainSliders{
+        width: 100% !important;
+    }
+    .Slider{
+        padding-left: 20px;
+    }
+}

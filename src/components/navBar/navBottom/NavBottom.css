@@ -1,0 +1,26 @@
+.NavBottom{
+    top: 100px;
+    font-weight: 500;
+}
+.NavBottom a{
+    color: #333;
+}
+
+/*  category  */
+.category-con{
+    max-width: 150px;
+    background:#eeeeeebd;
+    border: .5px solid #eee;
+    border-radius: 10px;
+    margin-left: .5rem;
+}
+.category-con > * {
+    margin: 3px;
+}
+.nav-con{
+    width: calc(100% - 150px);
+}
+
+.fa-sliders{
+    font-size: 1.5rem;
+}

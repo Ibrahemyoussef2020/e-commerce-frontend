@@ -1,0 +1,38 @@
+.user-inform{
+    box-shadow:3px 8px 15px 0px #777;
+    border-radius: 15px;
+}
+
+.user-img img{
+    width: 100%;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.favorite .x{
+    position: absolute;
+    top: 6px ;
+    right:5px ;
+    background: #fff;
+}
+
+.favorite .fav-img{
+    max-width: 100px;
+    max-height: 100px;
+    box-shadow:3px 5px 8px 0px #777777bf;
+}
+.fav-details{
+    box-shadow:3px 5px 8px 0px #777777bf;
+    height: 100px;
+}
+
+@media only screen and (max-width:400px) {
+    .user-inform{
+        flex-direction: column;
+    }
+    .user-inform .user-img  img{
+        max-width: 100%;
+        width: 350px;
+        margin-bottom: .5rem;
+    }
+}

@@ -1,0 +1,13 @@
+.BrandMarket{
+    background: #eee;
+    width: calc(100% - 210px);
+}
+
+.Mobile-slice{
+    min-width: 130px;
+}
+
+.BrandMarket img{
+    max-height: 200px;
+    max-width: 150px;
+}

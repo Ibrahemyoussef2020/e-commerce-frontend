@@ -1,0 +1,21 @@
+.StaticSide{
+    border: .5px solid #eee; 
+    width: 200px ;
+    min-height: 100%;
+}
+.StaticSide ul{
+    box-shadow: 1px 0px 8px 0px rgb(56 60 86 / 44%) ;
+    width: calc(100% - 5px);
+}
+.StaticSide li:hover{
+    background: #eeeeee6e;
+    color: rgb(0 0 255 / 62%);
+}
+.StaticSide li a:hover{
+    color: #f00;
+}
+
+.StaticSide li  img{
+    width: 20px !important;
+    height:20px !important;
+}

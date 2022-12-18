@@ -1,0 +1,17 @@
+.HeadBar{
+    background: #0f3460;
+    font-weight: 600 !important;    
+}
+
+.HeadBar ul{
+    max-width: 350px;
+}
+
+.HeadBar li a{
+    margin-right: 6px;
+}
+
+.HeadBar img{
+    max-width: 20px;
+    max-height: 20px;
+}

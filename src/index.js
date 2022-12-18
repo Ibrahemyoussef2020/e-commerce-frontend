@@ -1,13 +1,60 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { disableReactDevTools } from '@fvilers/disable-react-devtools';
+import {
+  createBrowserRouter,
+  RouterProvider
+} from "react-router-dom"
+
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
+import store from './redux/Store';
+import { Provider } from 'react-redux';
+
+import {LayOut} from './roots';
+import {Home} from './roots';
+import {Account} from './roots';
+import {Pages} from './roots';
+import {Purchases} from './roots';
+
+if(process.env.NODE_ENV ===  'production') disableReactDevTools()
+
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element:<LayOut />,
+    errorElement:<h1>Error src</h1>,
+    children:[
+      {
+        index:true,
+        element:<Home/> 
+      },
+      {
+        path:'account',
+        element:<Account/>
+      },
+      {
+        path:'pages',
+        element:<Pages/>
+      },
+      {
+        path:'purchases',
+        element:<Purchases/>
+      }
+    ]
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 

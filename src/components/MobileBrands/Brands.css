@@ -1,0 +1,42 @@
+.Brands{
+    height: auto;
+}
+
+@media only screen and (max-width: 640px){
+
+    /*            SlideSide         */
+
+    .Brands{
+        display: block;
+        height: auto !important;
+    }
+
+    .BrandFilter{
+        height: auto !important;
+        width: 100% !important;
+    }
+    .BrandFilter ul{
+        flex-direction: row !important;
+        padding: 0 !important;
+        flex-wrap: wrap;
+    }
+    .BrandFilter  li{
+        padding: 0 7px !important;
+        height: 100%;
+        max-width: 110px;
+        margin: 5px 5px;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+
+    .BrandFilter img{
+        margin-left: 0 !important;
+        margin-right: 5px !important;
+    }
+
+    /*  MainSide  */
+
+    .BrandMarket{
+        width: 100% !important;
+    }
+}

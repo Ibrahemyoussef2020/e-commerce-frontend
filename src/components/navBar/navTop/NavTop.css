@@ -1,0 +1,50 @@
+
+.NavTop-con-sticky{
+    background: #fff;
+}
+.NavTop-con-sticky .row{
+    --bs-gutter-x:0 !important
+}
+.sticky{
+    padding-top: 20px;
+    position: fixed;
+    top:-20px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+.logo{
+    min-width: 115px !important;
+    text-align: center;
+}
+.search{
+    padding-left: 1.5rem ;
+}
+.search input{
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 7px;
+    border: .5px solid #ccc;
+    text-align: center;
+}
+.search-icon{
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+.Nav .f {
+    color: rgb(233 69 96);
+}
+
+.side-list{
+    text-align: end;
+}
+
+.side-list button{
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+}

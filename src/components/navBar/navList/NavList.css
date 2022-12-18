@@ -1,0 +1,14 @@
+/* ul */
+.vertical-list{
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+.vertical-list li{
+    min-width: 60px;
+}
+
+.side-list{
+    right: 5px;
+    top: -3px;
+}
+

@@ -1,0 +1,50 @@
+.MainSliders{
+    background: #eee;
+    width: calc(100% - 210px);
+}
+.MainSlider h1{
+    font-weight: 700;
+    font-size: 45px;
+    color: #000;
+}
+
+.slick-slide{
+    overflow-x: hidden;
+}
+
+.slick-dots{
+    bottom: 50px;
+}
+.slick-arrow{
+    display: none !important;
+}
+
+.MainSlider button{
+    cursor: no-drop !important;
+}
+
+@media only screen and (max-width: 775px){
+    .MainSlider h1{
+        font-weight: 700;
+        font-size: 25px;
+        color: #000;
+    }
+    .MainSlider p{
+        margin-block-start: 0;
+        margin-block-end: 0;
+        font-size: 14px;
+    }
+
+    .slick-slide img{
+        max-width: 280px !important;
+        max-height: 280px !important;
+    }
+    .slick-slide img.Sdata3{
+        max-width: 240px !important;
+        max-height: 240px !important;
+    }
+
+    .slick-dots{
+        bottom: 50px;
+    }
+}

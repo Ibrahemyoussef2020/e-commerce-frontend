@@ -1,0 +1,37 @@
+.BrandFilter{
+    border: .5px solid #eee; 
+    width: 200px ; 
+    max-height: 400px ;
+}
+.BrandFilter h6{
+    box-shadow: 1px 0px 8px 0px rgb(63 81 181 / 65%);
+    text-shadow: 1px 0px 3px rgb(63 81 181 / 65%);
+    width: calc(100% - 5px);
+    width: calc(100% - 5px);
+}
+.BrandFilter ul{
+    box-shadow: 1px 0px 8px 0px rgb(56 60 86 / 44%) ;
+    width: calc(100% - 5px);
+    height: calc(100% - 25px);
+}
+
+.BrandFilter li:hover{
+    background: #eeeeee6e;
+    color: rgb(0 0 255 / 62%);
+    cursor: pointer;
+}
+
+.BrandFilter li img{
+    width: 12px !important;
+    height:22px !important;
+}
+
+.active{
+    color: #080 !important;
+}
+
+@media only screen and (min-width: 641px){
+    .BrandFilter{
+        min-height: 450px;
+    }
+}
