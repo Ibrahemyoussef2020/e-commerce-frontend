@@ -12,10 +12,12 @@ SectionHeder
 
 
 const Categories = () => {
+    const [loading,setLoading] = useState(true)
     const [data,setData] = useState([])
   
     useEffect(()=>{
       fetchData('categories',setData)
+      setTimeout(()=>setLoading(false),500)
     },[])
 
     return (
@@ -24,7 +26,7 @@ const Categories = () => {
           <Slider num={3} dots={false} arrow={true}>
           {data.length && data?.map(item =>(
                 <React.Fragment key={item.id}>
-                <Card>
+                <Card loading={loading}>
                   <TitleLabel bg='#2196f3'>{item.title}</TitleLabel>
                   <div className='imgContainer'>
                     <img src={item.img} className='w-100 h-100 mt-4'/>

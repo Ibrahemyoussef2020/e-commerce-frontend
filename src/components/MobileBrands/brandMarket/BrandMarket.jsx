@@ -3,6 +3,8 @@ import { useDispatch,useSelector} from 'react-redux'
 import {addProduct} from '../../../redux/slices/ShoppingSlice'
 import {toggleFavorite} from '../../../redux/slices/FavoriteSlice'
 import { fetchData} from '../../../apis'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 import {
   FaveCounter,
@@ -17,6 +19,7 @@ const BrandMarket = () => {
 
   const dispatch = useDispatch()
 
+  const [loading,setLoading]= useState(true)
   const [data,setData] = useState([])
 
     const toggle_favorite = (e,{id,name,brand,img})=>{
@@ -29,6 +32,7 @@ const BrandMarket = () => {
 
     useEffect(()=>{
         fetchData('mobileList',setData)
+        setTimeout(()=>setLoading(false),500)
     },[])
     
   return (
@@ -41,7 +45,7 @@ const BrandMarket = () => {
             const {id,name,brand,img,price} = item
 
            return <div className='Mobile-slice col col-sm-4 my-1' key={item.id}>
-              <Card>
+              <Card loading={loading}>
               <div 
                 onClick={(e)=> toggle_favorite(e,{id,name,brand,img})}
                 className='position-absolute'

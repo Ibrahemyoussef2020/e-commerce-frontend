@@ -25,6 +25,16 @@ code {
 /*                     classes                     */
 /***************************************************/
 /* element */
+.Skeleton-container span{
+  display: block;
+}
+li .Skeleton-container{
+  min-height: 25px;
+}
+li .Skeleton-container span{
+  min-height: 25px;
+}
+
 .gray-circle{
   min-width: 35px;
   min-height: 35px;

@@ -1,5 +1,5 @@
 
-const Slider = ({id,img,title,desc}) => {
+const Slider = ({loading,id,img,title,desc}) => {
     
   return (
     <div className='MainSlider Slider row px-sm-4 mt-md-5 w-100'>

@@ -5,17 +5,22 @@ import {filterBrand} from '../../../redux/slices/MobileSlice'
 
 import {fetchData} from '../../../apis'
 
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 import './BrandFilter.css'
 
 
 const BrandFilter = () => {
     const dispatch = useDispatch()
 
+    const [loading,setLoading] = useState(true)
     const [categories,setCategories] = useState([])
     const [active,setActive] = useState('all')
 
     useEffect(()=>{
-      fetchData('mobileFilter',setCategories)   
+      fetchData('mobileFilter',setCategories)
+      setTimeout(()=>setLoading(false),500)   
     },[])
 
     
@@ -24,6 +29,40 @@ const BrandFilter = () => {
       dispatch(filterBrand(title))
       setActive(title)
       console.log(title);
+    }
+
+    if(loading){
+      return (
+        <aside className='BrandFilter'>
+        <ul className="mobile-ul py-2 d-flex px-0 flex-column align-items-center justify-content-between">
+          <li>
+            <div className='Skeleton-container'>
+              <Skeleton width={'100%'} height={'100%'}/>
+            </div>
+          </li>  
+          <li>
+            <div className='Skeleton-container'>
+              <Skeleton width={'100%'} height={'100%'}/>
+            </div>
+          </li>
+          <li>
+            <div className='Skeleton-container'>
+              <Skeleton width={'100%'} height={'100%'}/>
+            </div>
+          </li>
+          <li>
+            <div className='Skeleton-container'>
+              <Skeleton width={'100%'} height={'100%'}/>
+            </div>
+          </li>
+          <li>
+            <div className='Skeleton-container'>
+              <Skeleton width={'100%'} height={'100%'}/>
+            </div>
+          </li>
+        </ul>
+        </aside>
+      )
     }
 
     

@@ -2,14 +2,53 @@ import { useEffect, useState,Fragment } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 import {fetchData} from '../../../apis'
 
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+
 import './StaticSide.css'
 
 const StaticSide = () => {
+    const [loading,setLoading] = useState(true)
     const [categories,setCategories] = useState([])
 
     useEffect(()=>{
       fetchData('asideData',setCategories)
+      setTimeout(()=>setLoading(false),500)  
     },[])
+
+    if(loading){
+      return (
+        <aside className='StaticSide'>
+        <ul className="static-ul h-100 py-2 d-flex px-0 flex-column align-items-center justify-content-between">
+          <li>
+            <div className='Skeleton-container'>
+              <Skeleton width={'100%'} height={'100%'}/>
+            </div>
+          </li>  
+          <li>
+            <div className='Skeleton-container'>
+              <Skeleton width={'100%'} height={'100%'}/>
+            </div>
+          </li>
+          <li>
+            <div className='Skeleton-container'>
+              <Skeleton width={'100%'} height={'100%'}/>
+            </div>
+          </li>
+          <li>
+            <div className='Skeleton-container'>
+              <Skeleton width={'100%'} height={'100%'}/>
+            </div>
+          </li>
+          <li>
+            <div className='Skeleton-container'>
+              <Skeleton width={'100%'} height={'100%'}/>
+            </div>
+          </li>
+        </ul>
+        </aside>
+      )
+    }
     
   return (
     <aside className='StaticSide'>

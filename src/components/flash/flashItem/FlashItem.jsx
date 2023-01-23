@@ -9,7 +9,7 @@ Routing
 } from '../../../utilities'
 
 
-const FlashItem = ({id,name,brand,img,price,qty,total,discount}) => {
+const FlashItem = ({loading,id,name,brand,img,price,qty,total,discount}) => {
     const dispatch = useDispatch()
     const {favorites} = useSelector(state => state.favorite)
 
@@ -20,9 +20,13 @@ const FlashItem = ({id,name,brand,img,price,qty,total,discount}) => {
             }))
         }
     }
+
+
+
+
 return (
     <div>
-        <Card>
+        <Card loading={loading}>
             <TitleLabel>{discount}% Off</TitleLabel>
             <div 
                 onClick={(e)=> toggle_favorite(e,{id,name,brand,img})}

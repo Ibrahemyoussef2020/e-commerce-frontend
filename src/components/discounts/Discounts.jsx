@@ -10,10 +10,12 @@ SectionHeder
 } from '../../utilities'
 
 const Discounts = () => {
+    const [loading,setLoading]= useState(true)
     const [data,setData] = useState([])
   
     useEffect(()=>{
       fetchData('discount',setData)
+      setTimeout(()=>setLoading(false),500)
     },[])
 
 
@@ -23,7 +25,7 @@ const Discounts = () => {
           <Slider num={3} dots={false} arrow={false}>
           {data.length && data?.map(item =>(
                 <div key={item.id} className='discount-slice'>
-                    <Card>
+                    <Card loading={loading}>
                     <div className='imgContainer'
                     style={{
                       backgroundImage:`url(${item.img})`,

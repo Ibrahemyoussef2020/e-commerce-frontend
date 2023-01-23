@@ -13,10 +13,12 @@ SectionHeder
 import './Arrivals.css'
 
 const Arrivals = () => {
+    const [loading,setLoading] = useState(true)
     const [data,setData] = useState([])
   
     useEffect(()=>{
       fetchData('arrivals',setData)
+      setTimeout(()=>setLoading(false),500)
     },[])
 
     const imgStyle ={
@@ -38,7 +40,7 @@ const Arrivals = () => {
           </header>
           {data.length && data?.map(item =>(
               <div className='col' key={item.id}>
-                <Card>
+                <Card loading={loading}>
                   <div className='imgContainer'>
                     <img src={item.img} className='w-100 h-100 mt-4'/>
                   </div>
