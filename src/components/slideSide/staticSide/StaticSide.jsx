@@ -8,15 +8,13 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import './StaticSide.css'
 
 const StaticSide = () => {
-    const [loading,setLoading] = useState(true)
     const [categories,setCategories] = useState([])
 
     useEffect(()=>{
       fetchData('asideData',setCategories)
-      setTimeout(()=>setLoading(false),500)  
     },[])
 
-    if(loading){
+    if(!categories.length){
       return (
         <aside className='StaticSide'>
         <ul className="static-ul h-100 py-2 d-flex px-0 flex-column align-items-center justify-content-between">

@@ -18,8 +18,6 @@ const BrandMarket = () => {
   const {brand} = useSelector(state => state.mobile)
 
   const dispatch = useDispatch()
-
-  const [loading,setLoading]= useState(true)
   const [data,setData] = useState([])
 
     const toggle_favorite = (e,{id,name,brand,img})=>{
@@ -32,8 +30,50 @@ const BrandMarket = () => {
 
     useEffect(()=>{
         fetchData('mobileList',setData)
-        setTimeout(()=>setLoading(false),500)
     },[])
+
+    if(!data.length){
+      return(
+        <div className={`row text-center bg-inhrit`} style={{justifyContent:'center'}}>
+         <div className='Skeleton-container col-sm-6 col-md-4   my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4   my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+        </div>
+      )
+  }
     
   return (
     <div id='Mobile' className="BrandMarket h-100 ">
@@ -45,7 +85,7 @@ const BrandMarket = () => {
             const {id,name,brand,img,price} = item
 
            return <div className='Mobile-slice col col-sm-4 my-1' key={item.id}>
-              <Card loading={loading}>
+              <Card>
               <div 
                 onClick={(e)=> toggle_favorite(e,{id,name,brand,img})}
                 className='position-absolute'

@@ -12,26 +12,20 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import './MainSliders.css'
 const MainSliders = () => {
 
-  const [loading,setLoading]=useState(true)
   const [data,setData] = useState([])
 
     useEffect(()=>{
         fetchData('Sdata',setData)
-        setTimeout(()=>setLoading(false),500)
     },[])
 
-  if(loading){
-    return(
-      <div className="MainSliders h-100 bg-white">
-        {data.length && data?.map((d)=>( 
-          <Fragment key={Math.random()}>
-            <div className='Skeleton-container'>
-               <Skeleton width={'100%'} height={'100%'}/>
-            </div>
-          </Fragment>
-      ))}
-      </div>
-    )
+    if(!data.length){
+      return(
+        <div className={`MainSliders h-100 row text-center bg-inhrit`} style={{justifyContent:'center'}}>
+         <div className='Skeleton-container col-12 flex-1 text-center bg-inhrit' style={{height:'100%'}}>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+        </div>
+      )
   }
 
   return (

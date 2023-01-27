@@ -13,14 +13,11 @@ import './BrandFilter.css'
 
 const BrandFilter = () => {
     const dispatch = useDispatch()
-
-    const [loading,setLoading] = useState(true)
     const [categories,setCategories] = useState([])
     const [active,setActive] = useState('all')
 
     useEffect(()=>{
-      fetchData('mobileFilter',setCategories)
-      setTimeout(()=>setLoading(false),500)   
+      fetchData('mobileFilter',setCategories) 
     },[])
 
     
@@ -31,7 +28,7 @@ const BrandFilter = () => {
       console.log(title);
     }
 
-    if(loading){
+    if(!categories.length){
       return (
         <aside className='BrandFilter'>
         <ul className="mobile-ul py-2 d-flex px-0 flex-column align-items-center justify-content-between">

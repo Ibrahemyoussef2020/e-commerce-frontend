@@ -1,6 +1,7 @@
 import{ Fragment, useEffect, useState } from 'react'
-
 import {fetchData} from '../../../apis'
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 import {
 Slider,
@@ -17,6 +18,28 @@ const FlashContainer = () => {
   useEffect(()=>{
     fetchData('flashData',setData)
   },[])
+
+  if(!data.length){
+    return(
+      <div className={`row text-center bg-inhrit`} style={{overflowX:'hidden'}}>
+       <div className='Skeleton-container col-sm-6 col-md-4   my-3 text-center bg-inhrit'>
+            <Skeleton height={200} width={'100%'}/>
+        </div>
+        <div className='Skeleton-container col-sm-6 col-md-4   my-3 text-center bg-inhrit'>
+            <Skeleton height={200} width={'100%'}/>
+        </div>
+        <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+            <Skeleton height={200} width={'100%'}/>
+        </div>
+        <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+            <Skeleton height={200} width={'100%'}/>
+        </div>
+        <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+            <Skeleton height={200} width={'100%'}/>
+        </div>
+      </div>
+    )
+}
 
   return (
     <div id='Flash' className='Flash section row'>

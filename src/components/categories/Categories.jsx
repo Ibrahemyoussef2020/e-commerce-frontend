@@ -1,5 +1,7 @@
 import React, {useEffect, useState } from 'react'
 import {fetchData} from '../../apis'
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import {
 TitleLabel,
 FaveCounter,
@@ -12,13 +14,36 @@ SectionHeder
 
 
 const Categories = () => {
-    const [loading,setLoading] = useState(true)
     const [data,setData] = useState([])
   
     useEffect(()=>{
       fetchData('categories',setData)
-      setTimeout(()=>setLoading(false),500)
     },[])
+
+    if(!data.length){
+      return( 
+        <div className={`row text-center bg-inhrit`} style={{overflowX:'hidden'}}>
+         <div className='Skeleton-container col-sm-6 col-md-4   my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4   my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+          <div className='Skeleton-container col-sm-6 col-md-4  my-3 text-center bg-inhrit'>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
+        </div>
+      )
+    }
 
     return (
         <div id='Categories' className='Categories section  mt-4 ' style={{marginTop:'70PX'}}>
@@ -26,7 +51,7 @@ const Categories = () => {
           <Slider num={3} dots={false} arrow={true}>
           {data.length && data?.map(item =>(
                 <React.Fragment key={item.id}>
-                <Card loading={loading}>
+                <Card>
                   <TitleLabel bg='#2196f3'>{item.title}</TitleLabel>
                   <div className='imgContainer'>
                     <img src={item.img} className='w-100 h-100 mt-4'/>

@@ -25,14 +25,21 @@ code {
 /*                     classes                     */
 /***************************************************/
 /* element */
+.Skeleton-container{
+  flex:1
+}
 .Skeleton-container span{
   display: block;
 }
 li .Skeleton-container{
-  min-height: 25px;
+  min-height:50px;
 }
 li .Skeleton-container span{
   min-height: 25px;
+}
+
+.MainSliders .Skeleton-container span{
+  background: inherit;
 }
 
 .gray-circle{
@@ -87,21 +94,16 @@ li .Skeleton-container span{
 .bottom{
   bottom:0
 }
+/* display */
+.flex{
+  display: flex;
+}
 /*  size */
 .fit-content{
   width: fit-content;
 }
 
 /* color */
-.red{
-  background-color: red;
-}
-.red{
-  background-color: red;
-}
-.yell{
-  background: yellow;
-}
 
 .green{
   background: #080;
