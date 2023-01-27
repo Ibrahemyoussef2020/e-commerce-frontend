@@ -61,7 +61,7 @@ const StaticSide = () => {
                         </div>
                         <div className="cat-title">
                         <Link to={title} className={`${title.startsWith('#') ? 'clicked' : 'unClicked'}`}>
-                          {title}
+                        {`${title.startsWith('#') ? title.slice(1,-1) : title}`}
                         </Link>  
                         </div>
                     </li>            

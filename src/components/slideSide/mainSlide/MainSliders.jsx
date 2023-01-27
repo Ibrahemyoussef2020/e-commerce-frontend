@@ -24,6 +24,9 @@ const MainSliders = () => {
          <div className='Skeleton-container col-12 flex-1 text-center bg-inhrit' style={{height:'100%'}}>
               <Skeleton height={200} width={'100%'}/>
           </div>
+          <div className='Skeleton-container col-12 flex-1 text-center bg-inhrit' style={{height:'100%'}}>
+              <Skeleton height={200} width={'100%'}/>
+          </div>
         </div>
       )
   }

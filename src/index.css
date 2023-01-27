@@ -162,3 +162,12 @@ a{
   margin-top: 100px !important;
   margin-bottom: 100px !important;
 }
+
+@media screen and (max-width: 480px) {
+  footer h4{
+    font-size: 1rem !important;
+  }
+  footer h6{
+    font-size: 14px !important;
+  }
+}

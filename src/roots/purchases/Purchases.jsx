@@ -12,6 +12,9 @@ const Purchases = () => {
 
   const {products} = useSelector(state => state.shopping)
 
+  console.log(typeof(products));
+  console.log(products);
+
   const [bill , setBill] = useState(0)
 
   useEffect(()=>{
