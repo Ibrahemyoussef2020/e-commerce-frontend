@@ -56,7 +56,7 @@ const Arrivals = () => {
           
           <header className='d-flex justify-content-between px-1'>
             <div>
-                <img style={imgStyle} src='https://img.icons8.com/glyph-neue/64/26e07f/new.png' />
+                <img style={imgStyle} src='https://img.icons8.com/glyph-neue/64/26e07f/new.webp' />
                 <span>New Arrivals</span>
             </div>
             <div>

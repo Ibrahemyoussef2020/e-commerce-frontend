@@ -13,7 +13,7 @@ const Account = () => {
       
       <div className='user-inform container p-2 mt-4 bg-white  d-flex justify-content-center align-items-center'>
         <div className="user-img">
-          <img src='imges/the-moon.jpg' alt='no img' className='rounded'/>
+          <img src='imges/the-moon.webp' alt='no img' className='rounded'/>
         </div>
         <div className="user-details px-2">
           <h6 className='mb-4'> <span>Name : </span>Ibrahim Yo</h6>

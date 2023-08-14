@@ -24,13 +24,13 @@ const HeadBar = () => {
                 </li>
                 <li className="flag">                   
                     <a>
-                        <img src="flags/un_flag..png" alt="Un" />
+                        <img src="flags/un_flag..webp" alt="Un" />
                     </a>
                     <a >USD</a>                   
                 </li>
                 <li className="flag">
                     <a>
-                        <img src="flags/eg_flag..png" alt="Eg" />
+                        <img src="flags/eg_flag..webp" alt="Eg" />
                     </a>
                     <a>PND</a>          
                 </li>
