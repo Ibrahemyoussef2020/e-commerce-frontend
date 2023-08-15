@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux'
 import {toggleSide} from '../../../redux/slices/AsideSlice'
-import logo from '../../../assets/img/logo/logo.svg'
 import './NavTop.css'
 
 
@@ -21,7 +20,7 @@ const NavTop = () => {
       <div className='row w-100 justify-content-around align-items-center'>
         
         <div className='logo col col-2'>
-          <img src={logo} alt="logo" />
+          <h1 className='logo__heading'>Book</h1>
         </div>
 
         <div className='search col col-6 px-2 position-relative'>

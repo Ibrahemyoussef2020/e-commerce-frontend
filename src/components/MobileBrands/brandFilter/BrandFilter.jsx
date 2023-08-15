@@ -66,9 +66,9 @@ const BrandFilter = () => {
 
   return (
     <aside className='BrandFilter'>
-        <h6 className='text-primary text-center my-0 py-1'>
+        <p className='text-primary text-center my-0 py-1'>
           choose Brand
-        </h6>
+        </p>
         <ul className="mobile-ul py-2 d-flex px-0 flex-column align-items-center justify-content-between">
             <li className={`fw-bold ${active === 'all' ? 'active' : 'inActive'}`}>
               <span onClick={(title)=>chooseBrand('all')}>all Brands</span>

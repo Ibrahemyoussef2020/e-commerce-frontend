@@ -52,9 +52,9 @@ const StaticSide = () => {
     <aside className='StaticSide'>
         <ul className="static-ul h-100 py-2 d-flex px-0 flex-column align-items-center justify-content-between">
             {
-              categories?.map(({id,img,title})=> 
+              categories?.map(({id,img,title},index)=> 
 
-              <Fragment key={id}>                 
+              <Fragment key={id + index}>                 
                     <li className='d-flex w-100 align-items-center justify-content-start p-1'>
                         <div className="cat-title">
                           <img className='h-100 mx-4' src={img} alt={title} />

@@ -1,7 +1,7 @@
 .Pages{
     background: #fff !important;
 }
-.Pages h4, .Pages h5{
+.Pages p, .Pages p{
     box-shadow: 5px 5px 15px 0px #cfc4c3;
     margin-bottom: .8rem;
 }

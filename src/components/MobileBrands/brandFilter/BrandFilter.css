@@ -3,7 +3,7 @@
     width: 200px ; 
     max-height: 400px ;
 }
-.BrandFilter h6{
+.BrandFilter p{
     box-shadow: 1px 0px 8px 0px rgb(63 81 181 / 65%);
     text-shadow: 1px 0px 3px rgb(63 81 181 / 65%);
     width: calc(100% - 5px);

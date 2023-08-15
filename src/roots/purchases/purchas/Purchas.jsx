@@ -28,7 +28,7 @@ const Purchas = ({id,name,brand,img,price,qty,total}) => {
 
           <section className='details-con position-relative bg-white py-1 px-2'>
             <header className='d-flex justify-content-between px-1'>
-              <h6 className='text-danger'>{name}</h6>
+              <p className='text-danger'>{name}</p>
               
               <div onClick={()=>dispatch(removeProduct({id:id}))}>
                 <i className="fa-solid fa-xmark text-danger clicked"></i>

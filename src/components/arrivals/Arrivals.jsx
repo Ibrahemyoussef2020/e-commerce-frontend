@@ -56,8 +56,7 @@ const Arrivals = () => {
           
           <header className='d-flex justify-content-between px-1'>
             <div>
-                <img style={imgStyle} src='https://img.icons8.com/glyph-neue/64/26e07f/new.webp' />
-                <span>New Arrivals</span>
+            <i className="fa-solid fa-border-all mx-1 text-danger"></i>                <span>New Arrivals</span>
             </div>
             <div>
                 <span className='view-all closed'>view all <i className="fa-solid fa-caret-right"></i></span>

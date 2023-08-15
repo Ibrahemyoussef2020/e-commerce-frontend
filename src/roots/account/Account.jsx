@@ -11,27 +11,27 @@ const Account = () => {
   return (
     <section className='user'>
       
-      <div className='user-inform container p-2 mt-4 bg-white  d-flex justify-content-center align-items-center'>
+      <div className='user-inform bg-white container p-2 mt-4 d-flex justify-content-center align-items-center'>
         <div className="user-img">
           <img src='imges/the-moon.webp' alt='no img' className='rounded'/>
         </div>
         <div className="user-details px-2">
-          <h6 className='mb-4'> <span>Name : </span>Ibrahim Yo</h6>
-          <h6 className='my-4'> <span>Title : </span>Cairo,ground flour</h6>
-          <h6 className='d-flex mt-4'><Routing/></h6>
-          <h6>Hi! : <small className='text-danger fw-900'>
+          <p className='mb-4'> <span>Name : </span>Ibrahim Yo</p>
+          <p className='my-4'> <span>Title : </span>Cairo,ground flour</p>
+          <div className='d-flex mt-4 mb-1'><Routing/></div>
+          <div>Hi! : <small className='text-danger fw-900'>
             { favorites?.length ? 'you liked following...'
               : 'plz select your favorites list'
             }
             </small>
-          </h6>
+          </div>
         </div>
       </div>
 
-      <div className='user-fav mt-4 bg-white'>
+      <div className='user-fav mt-4'>
         {favorites?.map(favorite => 
         <div key={favorite.id + Math.random()} 
-            className='favorite position-relative d-flex align-items-center'
+            className='favorite position-relative d-flex align-items-center  bg-white mb-2 p-1'
           >
           <div className='x px-1' onClick={()=>dispatch(removeFavorite({id:favorite.id}))}>
             <i className="fa-solid fa-xmark postion-absolute text-danger clicked"></i>  
@@ -43,8 +43,8 @@ const Account = () => {
               <div className='mb-1'> <small className='text-success'>Name : </small><small>{favorite.name}</small></div>
               <div className='my-1'> <small className='text-success'>brand : </small><small>{favorite.brand || 'Flash'}</small></div>
               <div className='my-1 d-flex'>
-              <small className='text-success'><Routing/></small> 
-                 <i className="f fa-solid fa-heart mt-1 text-danger"></i></div>
+              <div className='text-success'><Routing/></div> 
+                <i className="f fa-solid fa-heart mx-2  mt-1 text-danger"></i></div>
             </div>
         </div>)}
       </div>

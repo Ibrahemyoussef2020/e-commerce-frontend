@@ -31,7 +31,7 @@ const Purchases = () => {
     <section className='Purchases d-flex justify-content-between flex-wrap my-4 py-1 px-3 flex-row-reverse'>
       <div className='bill position-relative bg-white mt-4 mb-2'>
           <header className='text-danger text-bold px-2 py-2'>
-            <h6>cart summary</h6>
+            <p>cart summary</p>
           </header>
           <footer className='position-absolute bottom pos-left pos-right d-flex justify-content-between'>
               <small className='text-secondary'>Total price</small>

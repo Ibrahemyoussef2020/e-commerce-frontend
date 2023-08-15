@@ -7,22 +7,22 @@ const Footer = () => {
     <footer id='Us' className='Footer p-4 mt-4'>
       <div className="summaries row">
         <div className='col col-12 col-md-6'>
-          <h4 className='text-white my-2'>you will find here : </h4>
-          <h6 className='text-white'><i className="fa-solid fa-arrow-right-long my-2 mx-2"></i>Discounts up 30%</h6>
-          <h6 className='text-white'><i className="fa-solid fa-arrow-right-long my-2 mx-2"></i>Return serveses within 15 days</h6>
-          <h6 className='text-white'><i className="fa-solid fa-arrow-right-long my-2 mx-2"></i>Export from another continent</h6>
-          <h6 className='text-white'><i className="fa-solid fa-arrow-right-long my-2 mx-2"></i>Draws and gifts</h6>
+          <p className='text-white my-2'>you will find here : </p>
+          <p className='text-white'><i className="fa-regular fa-face-smile my-2 mx-2"></i>Discounts up 30%</p>
+          <p className='text-white'><i className="fa-regular fa-face-smile my-2 mx-2"></i>Return serveses within 15 days</p>
+          <p className='text-white'><i className="fa-regular fa-face-smile my-2 mx-2"></i>Export from another continent</p>
+          <p className='text-white'><i className="fa-regular fa-face-smile my-2 mx-2"></i>Draws and gifts</p>
         </div>
-        <div className='col col-12 col-md-6'>
-          <h4 className='text-white my-2'>why us : </h4>
-          <h6 className='text-white'><i className="fa-solid fa-arrow-right-long my-2 mx-2"></i>All products are brands</h6>
-          <h6 className='text-white'><i className="fa-solid fa-arrow-right-long my-2 mx-2"></i>Authorized outlet</h6>
-          <h6 className='text-white'><i className="fa-solid fa-arrow-right-long my-2 mx-2"></i>Our Dates are on the time</h6>
-          <h6 className='text-white'><i className="fa-solid fa-arrow-right-long my-2 mx-2"></i>So fast arriving</h6>
+        <div className='col col-12 col-md-6 left'>
+          <p className='text-white my-2'>why us : </p>
+          <p className='text-white'><i className="fa-regular fa-face-smile my-2 mx-2"></i>All products are brands</p>
+          <p className='text-white'><i className="fa-regular fa-face-smile my-2 mx-2"></i>Authorized outlet</p>
+          <p className='text-white'><i className="fa-regular fa-face-smile my-2 mx-2"></i>Our Dates are on the time</p>
+          <p className='text-white'><i className="fa-regular fa-face-smile my-2 mx-2"></i>So fast arriving</p>
         </div>
       </div>
       <hr/>
-      <div className='icons mt-4 d-flex justify-content-between'>
+      <div className='icons mt-4 d-flex justify-content-center gap-3'>
         <i className="fa-brands fa-facebook text-white"></i>
         <i className="fa-brands fa-twitter text-white"></i>
         <i className="fa-brands fa-instagram text-white"></i>

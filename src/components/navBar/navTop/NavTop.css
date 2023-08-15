@@ -14,8 +14,16 @@
     z-index: 2;
 }
 .logo{
-    min-width: 115px !important;
+    min-width:90px !important;
     text-align: center;
+}
+.logo__heading{
+    font-size: clamp(1.7rem , 5vw , 3.5rem);
+    font-weight:900;
+    font-style: italic;
+    font-family: tahoma, sans-serif;
+    letter-spacing:1px;
+    color:rgb(220 53 69);
 }
 .search{
     padding-left: 1.5rem ;

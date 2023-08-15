@@ -1,9 +1,38 @@
 .Footer{
-    background:#0f3460;
+    background-color: #fefefe;
+    margin-top: 3rem !important;
 }
 .Footer hr{
-    color: #fff;
+    color: #ccc;
+}
+.Footer * {
+    color: #222 !important;
 }
 .Footer .fa-brands , .Footer .fa-solid{
     font-size:1.5rem ;
+}
+
+.Footer .fa-regular{
+    font-size: 1rem;
+    font-weight: bold;
+    color:green !important;
+    animation: exited 1.5s linear infinite;
+}
+
+
+@media (min-width:767px){
+    .Footer .left{
+        padding-left: 2rem !important;
+        border-left: 1px solid #ccc;
+    }
+}
+
+@keyframes exited{
+    
+    0%{
+        transform: rotateY(60deg);
+    }
+    100%{
+        transform: rotateY(-20deg);
+    }
 }
